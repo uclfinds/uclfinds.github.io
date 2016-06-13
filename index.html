@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="img/favicon.png">
 
     <title>
-      UCLFINDS | HOME
+      UCLFINDS
     </title>
 
     <!-- Bootstrap core CSS -->
@@ -89,13 +89,7 @@
                       </ul>
                   </li>
                   <li>
-                      <a href="contact.html">Research</a>
-                  </li>
-                  <li>
                       <a href="sponsors.html">Sponsors & Partners</a>
-                  </li>
-                  <li>
-                      <a href="team.html">Team</a>
                   </li>
                   <li>
                       <a href="contact.html">Contact</a>
@@ -138,16 +132,14 @@
         <div class="row">
           <div class="col-md-12">
         <h2>
-          <i>RESPONSIVE VIDEO</i>
+          <i>FINANCIAL MARKET MODELLING</i>
             <br />
-          <i>SUPPORT AND</i>
+          <i>QUANTITATIVE FINANCE</i>
             <br />
-          <i>MANY MORE</i>
+          <i> HFT</i>
         </h2>
         <p>
-          <i>Lorem ipsum dolor amet</i>
-            <br />
-          <i>tempor incididunt ut</i>
+          <i>UCL Value Proposition</i>
         </p>
         <a href="#" class="btn btn-info btn-lg da-link">
           Read more
@@ -172,22 +164,33 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 col-sm-3 address wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">
+          <div class="col-lg-2 col-sm-2 address wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">
             <h1>
               contact info
             </h1>
             <address>
-              <p>UCL Finanacial Industry Series</p>
+              <p>UCL Financial Industry Series</p>
               <p>Department of Computer Science</p>
-              <p><i class="fa fa-home pr-10"></i>University College London, Malet Place</p>
+              <p><i class="fa fa-home pr-10"></i>University College London, Malet Place Engineering Building</p>
               <p><i class="fa fa-globe pr-10"></i>WC1E 6BT, London </p>
-              <p><i class="fa fa-envelope pr-10"></i>Email :   <a href="javascript:;">finds@example.com</a></p>
+              <p><i class="fa fa-envelope pr-10"></i>Email :   <a href="javascript:;">edward.litonjua.12@ucl.ac.uk</a></p>
             </address>
           </div>
 
-
+          <!--google map start-->
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-2 col-sm-2">
+                <div id="map-canvas" style="width: 100%; height: 250px">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--google map end-->
         </div>
       </div>
+
+
     </footer>
     <!-- footer end -->
     <!--small footer start -->
@@ -226,6 +229,8 @@
     </script>
     <script type="text/javascript" src="assets/bxslider/jquery.bxslider.js">
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&AMP;sensor=false">
+    </script>
 
     <script type="text/javascript" src="js/jquery.parallax-1.1.3.js">
     </script>
@@ -252,6 +257,29 @@
 
       });
     </script>
+
+<script>
+    //google map
+    function initialize() {
+      var myLatlng = new google.maps.LatLng(51.523288, -0.132228);
+      var mapOptions = {
+        zoom: 15,
+        center: myLatlng,
+        styles:[{"featureType":"all","stylers":[{"saturation":0},{"hue":"#e7ecf0"}]},{"featureType":"road","stylers":[{"saturation":-70}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"visibility":"simplified"},{"saturation":-60}]}]
+      }
+          var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'Contact'
+      }
+                                         );
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+  </script>
 
 
 
